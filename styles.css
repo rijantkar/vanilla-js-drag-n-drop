@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "AppleGothic", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+.draggable-list {
+    list-style-type: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 0;
+    width: 300px;
+}
+
+.draggable-list li {
+    background-color: white;
+    display: flex;
+    flex: 1;
+}
+
+.draggable-list li:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.draggable-list .number {
+    background-color: mediumpurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+}
+
+.draggable-list li.over .draggable {
+    background-color: azure;
+}
+
+.draggable-list .js-name {
+    margin: 0 20px 0 0;
+}
+
+.draggable-list li.right .js-name {
+    color: green;
+}
+
+.draggable-list li.wrong .js-name {
+    color: brown;
+}
+
+.draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+}
+
+.check-btn {
+    background-color: mediumpurple;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.check-btn:active {
+    transform: scale(0.90);
+}
+
+.check-btn:focus {
+    outline: none;
+}
